@@ -7,7 +7,7 @@ file_to_load = os.path.join("Resources", "election_results.csv")
 file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 
-#1. Initialize a total vote counter.
+# Initialize a total vote counter.
 total_votes = 0
 # Candidate Options
 candidate_options =[]
@@ -34,7 +34,7 @@ with open(file_to_load) as election_data:
             # Add it to the list of candidates.
             candidate_options.append(candidate_name)
 
- # 2. Begin tracking that candidate's vote count.
+ #  Begin tracking that candidate's vote count.
             candidate_votes[candidate_name] = 0
              # Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
