@@ -2,7 +2,7 @@
 
 
 ## Overview of Election Audit
-A Colorado Board of Elections has given you the following tasks to complete the election audit of a recent local congressional eletion.
+A Colorado Board of Elections has given you the following tasks to complete the election audit of a recent local congressional eletion by using Python.
 
 1. Calculate the toal number of votes cast.
 2. Get a comoplet list of candidates who received votes.
@@ -18,12 +18,54 @@ A Colorado Board of Elections has given you the following tasks to complete the 
 - software: Python 3.8.8
 
 ## Election-Audit Results
-The analysis of the election show that:
--  There were 369,711 votes cast in the election.
+The analysis of the election shows that:
+
+![resultcapture](Resources/election_results.png)
+-  There were 369,711 votes cast in the election. 
+         
+         To get total votes use codes below. 
+         
+         # 1.Initialize a total vote counter.
+         total_votes = 0
+         
+            # 2.For each row in the CSV file.
+            for row in reader:
+         
+               # 3.add to the total vote count
+               total_votes = total_votes + 1
+   
 -  The county vote results were:
    - Jefferson had 10.5% of the vote and 38,855 votes.
    - Denver had 82.8% of the vote and 306,055 votes.
    - Arapahoe: 6.7% of the vote and 24,801 votes.
+
+         To get the number of total votes for each county use codes below.
+         
+         #  1.Create a county list and county votes dictionary.
+            county_names = []
+            county_votes = {}
+            
+               # 2. For each row in the CSV file.
+               for row in reader:
+               
+                  # 3. Write an if statement that checks that the
+                  # county does not match any existing county in the county list.
+                  if county_name not in county_names:
+
+                     # 4. Add the existing county to the list of counties.
+                     county_names.append(county_name)
+
+                     # 5. Begin tracking the county's vote count.
+                     county_votes[county_name]=0
+
+                  # 6. Add a vote to that county's vote count.
+                  county_votes[county_name] += 1
+                  
+                  
+           To get the percentage of total votes for each county.  
+           
+
+            
 - The county that had the largest number of votes:
    - Denver, which had 82.8% of the vote and 306,055 votes.
 - The candidate results were:
