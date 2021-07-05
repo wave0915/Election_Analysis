@@ -18,12 +18,13 @@ A Colorado Board of Elections has given you the following tasks to complete the 
 - software: Python 3.8.8
 
 ## Election-Audit Results
-The analysis of the election shows that:
+The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows in [election_results.txt](analysis/election_results.txt) that:
 
 ![resultcapture](Resources/election_results.png)
+
 -  There were 369,711 votes cast in the election. 
          
-         To get total votes use codes below. 
+         #To get total votes. 
          
          # 1.Initialize a total vote counter.
          total_votes = 0
@@ -39,7 +40,7 @@ The analysis of the election shows that:
    - Denver had 82.8% of the vote and 306,055 votes.
    - Arapahoe: 6.7% of the vote and 24,801 votes.
 
-         To get the number of total votes for each county use codes below.
+         # To get the number of total votes for each county.
          
          #  1.Create a county list and county votes dictionary.
             county_names = []
@@ -62,7 +63,7 @@ The analysis of the election shows that:
                   county_votes[county_name] += 1
                   
                   
-           To get the percentage of total votes for each county.  
+          # To get the percentage of total votes for each county.  
            
 
             
@@ -75,5 +76,5 @@ The analysis of the election shows that:
 - The winner of the election was:
    - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
    
-
+* All codes are retrieved and disected from [PyPoll_Challenge.py](PyPoll_Challenge.py)
 ## Election-Audit Summary
