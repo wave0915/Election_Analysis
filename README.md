@@ -14,7 +14,7 @@ A Colorado Board of Elections has given you the following tasks to complete the 
 8. The county with the highest turnout
 
 ## Resources
-- Data Source: election_results.csv
+- Data Source: [election_results.csv](Resources/election_results.csv)
 - software: Python 3.8.8
 
 ## Election-Audit Results
