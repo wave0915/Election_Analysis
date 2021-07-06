@@ -78,13 +78,46 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
 - The county that had the largest number of votes:
    - Denver, which had 82.8% of the vote and 306,055 votes.
 
-           # To get 
+           # To find the county that had the largest number of votes.
+           
+               # 1. In the for loop from county dictionary.
+               for county_name in county_votes:
+                   
+                   # 2. Write an if statement to determine the winning county and get its vote count.
+                   if (county_vote > largest_county_votes):
+                       largest_county_votes = county_vote
+                       largest_county_turnout = county_name
+                       
+               # 3. Print the county with the largest turnout
+               largest_county_turnout = (
+                  f"\n----------------------------------\n"
+                  f"Largest County Turnout: {largest_county_turnout}\n"
+                   f"----------------------------------\n"
+               )
+               
+               
 - The candidate results were:
    - Charles Casper Stockham: 23.0% (85,213)
    - Diana DeGette: 73.8% (272,892)
    - Raymon Anthony Doane: 3.1% (11,606)
+            
+            # To find the number of votes and the percentage of the total votes each candidate received.
+            
+              # 1. In the for loop.
+              for candidate_name in candidate_votes:
+              
+              # 2. Retrieve vote count and percentage
+                  votes = candidate_votes.get(candidate_name)
+                  vote_percentage = float(votes) / float(total_votes) * 100
+                  candidate_results = (
+                           f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+                           
+            
+            
 - The winner of the election was:
    - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
+
+                  
    
 * All codes are retrieved and disected from [PyPoll_Challenge.py](PyPoll_Challenge.py)
 ## Election-Audit Summary
