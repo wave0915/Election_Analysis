@@ -42,7 +42,7 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
                   f"Total Votes: {total_votes:,}\n"
                   f"-------------------------\n\n"
                   f"County Votes:\n")
-               print(election_results, end="")
+              print(election_results, end="")
                
    
 -  The county vote results were:
@@ -155,5 +155,8 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
 
                   
    
-* All codes are retrieved and disected from [PyPoll_Challenge.py](PyPoll_Challenge.py)
+** All codes are retrieved and dissected from [PyPoll_Challenge.py](PyPoll_Challenge.py)
+
 ## Election-Audit Summary
+
+By using python, this script can be used for any election. For example,  
