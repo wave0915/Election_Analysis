@@ -34,6 +34,16 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
          
                  # 3.add to the total vote count
                  total_votes = total_votes + 1
+             
+             # 4. Print the final vote count.
+              election_results = (
+                  f"\nElection Results\n"
+                  f"-------------------------\n"
+                  f"Total Votes: {total_votes:,}\n"
+                  f"-------------------------\n\n"
+                  f"County Votes:\n")
+               print(election_results, end="")
+               
    
 -  The county vote results were:
    - Jefferson had 10.5% of the vote and 38,855 votes.
@@ -59,41 +69,44 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
                       # 5. Begin tracking the county's vote count.
                       county_votes[county_name]=0
 
-                   # 6. Add a vote to that county's vote count.
-                   county_votes[county_name] += 1
+                  # 6. Add a vote to that county's vote count.
+                  county_votes[county_name] += 1
                   
                   
           # To get the percentage of total votes for each county.
               
-               # 1. Write a for loop to get the county from the county dictionary.
-               for county_name in county_votes:
+               # 7. Write a for loop to get the county from the county dictionary.
+              for county_name in county_votes:
                    
-                   # 2. Retrieve the county vote count.
-                   county_vote = county_votes[county_name]
+                  # 8. Retrieve the county vote count.
+                  county_vote = county_votes[county_name]
                    
-                   # 3. Calculate the percentage of votes for the county.
-                   county_percent = int(county_vote)/int(total_votes)*100
-
+                  # 9. Calculate the percentage of votes for the county.
+                  county_percent = int(county_vote)/int(total_votes)*100
+                  
+                  # 10. Print the county results.
+                  county_results=(f"{county_name}: {county_percent: .1f}% ({county_vote:,})\n")
+                  print(county_results, end ="")
             
 - The county that had the largest number of votes:
    - Denver, which had 82.8% of the vote and 306,055 votes.
 
            # To find the county that had the largest number of votes.
            
-               # 1. In the for loop from county dictionary.
-               for county_name in county_votes:
+              # 1. In the for loop from county dictionary.
+              for county_name in county_votes:
                    
-                   # 2. Write an if statement to determine the winning county and get its vote count.
-                   if (county_vote > largest_county_votes):
+                  # 2. Write an if statement to determine the winning county and get its vote count.
+                  if (county_vote > largest_county_votes):
                        largest_county_votes = county_vote
                        largest_county_turnout = county_name
                        
-               # 3. Print the county with the largest turnout
-               largest_county_turnout = (
+              # 3. Print the county with the largest turnout
+              largest_county_turnout = (
                   f"\n----------------------------------\n"
                   f"Largest County Turnout: {largest_county_turnout}\n"
-                   f"----------------------------------\n"
-               )
+                  f"----------------------------------\n"
+              )
                
                
 - The candidate results were:
@@ -109,13 +122,36 @@ The analysis of the election, [PyPoll_Challenge.py](PyPoll_Challenge.py), shows 
               # 2. Retrieve vote count and percentage
                   votes = candidate_votes.get(candidate_name)
                   vote_percentage = float(votes) / float(total_votes) * 100
+                  
+              # 3. Print candidate results.
                   candidate_results = (
                            f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+                  print(candidate_results)
                            
             
             
 - The winner of the election was:
    - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes.
+
+              # To determine winning vote count, winning percentage, and candidate.
+                  
+              # 1. In the for loop.
+              for candidate_name in candidate_votes:
+                
+                  # 2. write if statement.
+                  if (votes > winning_count) and (vote_percentage > winning_percentage):
+                       winning_count = votes
+                       winning_candidate = candidate_name
+                       winning_percentage = vote_percentage
+
+              # 3. Print the winning candidate.
+              winning_candidate_summary = (
+                  f"-------------------------\n"
+                  f"Winner: {winning_candidate}\n"
+                  f"Winning Vote Count: {winning_count:,}\n"
+                  f"Winning Percentage: {winning_percentage:.1f}%\n"
+                  f"-------------------------\n")
+              print(winning_candidate_summary)
 
                   
    
